@@ -95,7 +95,8 @@ Checks: >
   -bugprone-narrowing-conversions,
   -bugprone-easily-swappable-parameters,
   -bugprone-implicit-widening-of-multiplication-result,
-  -bugprone-unchecked-optional-access
+  -bugprone-unchecked-optional-access,
+  -readability-redundant-access-specifiers
 
 # Turn all the warnings from the checks above into errors.
 # WarningsAsErrors: "*"
@@ -103,7 +104,7 @@ Checks: >
 HeaderFilterRegex: "(google/cloud/|generator/).*\\.h$"
 
 CheckOptions:
-  - { key: readability-identifier-naming.NamespaceCase,          value: lower_case }
+  - { key: readability-identifier-naming.NamespaceCase,          value: CamelCase }
   - { key: readability-identifier-naming.ClassCase,              value: CamelCase  }
   - { key: readability-identifier-naming.StructCase,             value: CamelCase  }
   - { key: readability-identifier-naming.TemplateParameterCase,  value: CamelCase  }
