@@ -44,6 +44,16 @@ The purpose of this subdirectory is to utilize **lib** and produce the executabl
 
 All source files should be placed in **src** dir. Source files in this dir should not contain any program main logic.
 
+# Project setup
+
+Run the following command to setup your project:
+
+```bash
+python3 ./setupProject.py
+```
+
+After your project successfull setup you may delete `setupProject.py` file.
+
 # Usage
 
 To build your project use `build.sh`.
