@@ -13,3 +13,14 @@ add_subdirectory(lib)
 
 # Application Executable
 add_subdirectory(app)
+
+# Platform specific actions
+# if(WIN32)
+#     message(STATUS "WINDOWS")
+# elseif(APPLE)
+#     message(STATUS "APPLE")
+# elseif(UNIX AND NOT APPLE)
+#     message(STATUS "LINUX")
+# else()
+#     message(STATUS "UNKNOWN OS")
+# endif()
