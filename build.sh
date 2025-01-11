@@ -9,7 +9,8 @@ SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 cd "$SCRIPT_DIR" || exit 1
 
 BUILD_DIR='./build'
-C_C='-DCMAKE_C_COMPILER=clang'
+# Uncomment if using C in your project
+# C_C='-DCMAKE_C_COMPILER=clang'
 CXX_C='-DCMAKE_CXX_COMPILER=clang++'
 BUILD_GEN="-G Ninja"
 
