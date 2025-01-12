@@ -16,7 +16,7 @@ def validateProjectName() -> str:
             print("Project name may contain only letters, digits, underscores, dashes!")
             continue
         if project_name[0] in {"_", "-"} or project_name[0].isdigit():
-            print("Project name must start with a letter")
+            print("Project name must start with a letter!")
             continue
 
         break
