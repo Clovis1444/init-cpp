@@ -52,6 +52,7 @@ def setupProject(name: str):
     # - Change [include, namespace] in lib cpp
     # - Change [include, namespace] in app cpp
     # - Rename lib source files and lib include subdir
+    # - Change $TARGET in run.sh
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -129,6 +130,12 @@ def setupProject(name: str):
     # lib include subdir rename
     new_lib_include_subdir: str = os.path.join(lib_include_dir, name)
     os.rename(lib_include_subdir, new_lib_include_subdir)
+
+    # run script $TARGET
+    run_script_path: str = os.path.join(script_dir, "run.sh")
+    run_script_lines: list[str] = readFileLines(run_script_path)
+    changeLine(run_script_lines, r"TARGET=\"/app/\w+\"", f'TARGET="/app/{name}"')
+    writeFile(run_script_path, run_script_lines)
 
 
 def main():

@@ -54,6 +54,8 @@ python3 ./setupProject.py
 
 After your project successfull setup you may delete `setupProject.py` file.
 
+> [!IMPORTANT] > `setupProject.py` supposed to execute on a clean project. There is no guarantee that it will work on a modified project.
+
 # Usage
 
 To build your project use `build.sh`.
